@@ -34,7 +34,33 @@
 
 	<script>
 		/********** Write all your code below this line: **********/
-		
+
+		/* 
+		Workflow:
+		1. Detect user click on a button (EUR or CNY)
+		2. Save displayed USD value into a variable 
+		3. Convert the variable above into an integer
+		4. Create a new variable to store converted value from USD to EUR or CNY
+		5. Display calculated value in the appropriate <span> tag
+		*/
+
+		var testusd = document.querySelector("#usd").innerHTML;
+
+		testusd = parseFloat(testusd); 
+
+		document.querySelector('#eur-btn').onclick = function(){ 
+			var euro = testusd*0.93;
+			document.querySelector('#eur-value').innerHTML = euro;
+
+		}
+
+		document.querySelector('#cny-btn').onclick = function(){
+			var cny = testusd*6.77;
+			document.querySelctor('#cny-value').innerHTML = cny;
+		}
+
+
+
 		
 	</script>
 </body>
