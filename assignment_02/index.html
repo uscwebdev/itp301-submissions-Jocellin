@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jocellin | Shopping Cart</title>
+<style>
+
+body{
+	margin:0px;
+}
+
+#header{
+	background-color:#4d2600;
+	text-align:center;
+	color:white;
+	padding:50px;
+}
+
+#gallery{
+	width:1200px;
+	margin: auto;
+}
+
+#content{
+	padding-left:200px;
+	margin-top:50px;
+}
+
+#footer{
+	background-color:#AD7D67;
+	text-align:center;
+	color:#4d2600;
+	font-size:16px;
+	padding:20px;
+	margin-top:80px;
+	
+
+}
+
+.container{
+	float:left;
+	text-align:center;
+}
+
+.image-size{
+	height:400px;
+	float:left;
+}
+
+.clearfloat{
+	clear: both;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="header">
+<h1>My Shopping Cart</h1>
+</div>
+
+<div id="gallery">
+
+<div class=container>
+<img class="image-size" src="golfhoodie.jpeg" alt="golfshirt" id="item-1">
+<p>Golf Hoodie<br>$<span id="count1">100</span></p>
+</div>
+
+<div class=container>
+<img class="image-size" src="golfshirt.jpeg" alt="golfshirt" id="item-2">
+<p>Golf Shirt<br>$<span id="count2">80</span></p>
+</div>
+
+<div class=container>
+<img class="image-size" src="golfhat.jpeg" alt="golfhat" id="item-3">
+<p>Golf Hat<br>$<span id="count3">55</span></p>
+</div>
+
+</div>
+
+<div class=clearfloat></div>
+
+<div id="content">
+<p><strong>Cart Subtotal:</strong>$<span id="totalcount">0</span></p>
+</div>
+
+<div id="footer">
+<p>The GOLF shop 2023</p>
+</div>	
+
+<script>
+/*
+
+Workflow:
+   1.User clicks on an item (onclick.event)
+   2.Save current count in a variable subtotal 
+   3.Convert variable to numeric value 
+   4.Increment "subtotal" 
+   5.Display added value to users
+
+*/
+
+// 1. User clicks on an item (onclick.event)
+   var subtotal = 0;
+
+   document.querySelector("#item-1").onclick = function(){
+	var usd1 = document.querySelector("#count1").innerHTML;
+
+	usd1 = parseInt(usd1);
+
+	subtotal += usd1;
+
+	document.querySelector("#totalcount").innerHTML = subtotal
+
+
+};
+
+  var subtotal = 0;
+
+   document.querySelector("#item-2").onclick = function(){
+	var usd1 = document.querySelector("#count2").innerHTML;
+
+	usd1 = parseInt(usd1);
+
+	subtotal += usd1;
+
+	document.querySelector("#totalcount").innerHTML = subtotal
+
+
+};
+
+ var subtotal = 0;
+
+   document.querySelector("#item-3").onclick = function(){
+	var usd1 = document.querySelector("#count3").innerHTML;
+
+	usd1 = parseInt(usd1);
+
+	subtotal += usd1;
+
+	document.querySelector("#totalcount").innerHTML = subtotal
+
+
+};
+
+
+
+
+</script>	
+
+</body>
+</html>
