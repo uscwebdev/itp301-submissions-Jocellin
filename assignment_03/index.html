@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+	<style>
+		#display {
+			font-size: 2em;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1 class="col-12 text-center mt-5">JS Calculator</h1>
+		</div> <!-- .row -->
+		<div class="row">
+			<div id="calculator" class="mt-4 col-12 col-md-6 ml-md-auto mr-md-auto col-lg-4">
+				<div class="row">
+					<input type="text" id="display" class="col-12 text-right form-control" value="0">
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="AC-btn" class="col-9 btn btn-lg btn-outline-dark">AC</button>
+					<button id="division-btn"class="col-3 btn btn-lg btn-outline-dark">/</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="7-btn" class="col-3 btn btn-lg btn-outline-dark">7</button>
+					<button id="8-btn" class="col-3 btn btn-lg btn-outline-dark">8</button>
+					<button id="9-btn" class="col-3 btn btn-lg btn-outline-dark">9</button>
+					<button id="multiply-btn" class="col-3 btn btn-lg btn-outline-dark">x</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="4-btn" class="col-3 btn btn-lg btn-outline-dark">4</button>
+					<button id="5-btn"class="col-3 btn btn-lg btn-outline-dark">5</button>
+					<button id="6-btn" class="col-3 btn btn-lg btn-outline-dark">6</button>
+					<button id="minus-btn"class="col-3 btn btn-lg btn-outline-dark">-</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="1-btn" class="col-3 btn btn-lg btn-outline-dark">1</button>
+					<button id="2-btn" class="col-3 btn btn-lg btn-outline-dark">2</button>
+					<button id="3-btn" class="col-3 btn btn-lg btn-outline-dark">3</button>
+					<button id="add-btn" class="col-3 btn btn-lg btn-outline-dark">+</button>
+				</div> <!-- .row -->
+				<div class="row">
+					<button id="0-btn"class="col-6 btn btn-lg btn-outline-dark">0</button>
+					<button id="point-btn" class="col-3 btn btn-lg btn-outline-dark">.</button>
+					<button id="equal-btn" class="col-3 btn btn-lg btn-outline-dark">=</button>
+				</div> <!-- .row -->
+			</div> <!-- #calculator -->
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+
+	<script>
+
+
+document.querySelector('#AC-btn').onclick = function(){
+	document.querySelector('#display').value = "0";
+
+}
+
+var num01;
+var operation;
+document.querySelector('#division-btn').onclick = function(){
+	num01 = document.querySelector("#display").value;
+
+	num01 = parseInt(num01);
+
+	operation = '/';
+
+	document.querySelector("#display").value = "0";	
+}
+
+var calculatednum;
+document.querySelector('#7-btn').onclick = function(){
+		calculatednum = document.querySelector("#display").value;
+
+	if (calculatednum == "0") {
+		calculatednum = "7";
+	} else {
+		calculatednum = calculatednum + "7";
+	}
+document.querySelector("#display").value = calculatednum;
+}
+
+var calculatednum;
+document.querySelector('#8-btn').onclick = function(){
+	calculatednum = document.querySelector("#display").value;
+
+	if (calculatednum == "0") {
+		calculatednum = "8";
+	} else {
+		calculatednum = calculatednum + "8";
+	}
+document.querySelector("#display").value = calculatednum;
+}
+
+var calculatednum;
+document.querySelector('#9-btn').onclick = function(){
+	calculatednum = document.querySelector("#display").value;
+
+	if (calculatednum == "0") {
+		calculatednum = "9";
+	} else {
+		calculatednum = calculatednum + "9";
+	}
+document.querySelector("#display").value = calculatednum;
+}
+
+var num01;
+var operation;
+document.querySelector('#multiply-btn').onclick = function(){
+	num01 = document.querySelector("#display").value;
+
+	num01 = parseInt(num01);
+
+	operation = '*';
+
+	document.querySelector("#display").value = "0";	
+}
+
+var calculatednum;
+document.querySelector('#4-btn').onclick = function(){
+	calculatednum = document.querySelector("#display").value;
+
+	if (calculatednum == "0") {
+		calculatednum = "4";
+	} else {
+		calculatednum = calculatednum + "4";
+	}
+document.querySelector("#display").value = calculatednum;
+}
+
+var calculatednum;
+document.querySelector('#5-btn').onclick = function(){
+	calculatednum = document.querySelector("#display").value;
+
+	if (calculatednum == "0") {
+		calculatednum = "5";
+	} else {
+		calculatednum = calculatednum + "5";
+	}
+document.querySelector("#display").value = calculatednum;
+}
+
+var calculatednum;
+document.querySelector('#6-btn').onclick = function(){
+	calculatednum = document.querySelector("#display").value;
+
+	if (calculatednum == "0") {
+		calculatednum = "6";
+	} else {
+		calculatednum = calculatednum + "6";
+	}
+document.querySelector("#display").value = calculatednum;
+}
+
+var num01;
+var operation;
+document.querySelector('#minus-btn').onclick = function(){
+	num01 = document.querySelector("#display").value;
+
+	num01 = parseInt(num01);
+
+	operation = '-';
+
+	document.querySelector("#display").value = "0";	
+	
+}
+
+var calculatednum; 
+document.querySelector('#1-btn').onclick = function(){
+	calculatednum = document.querySelector("#display").value;
+
+	if (calculatednum == "0") {
+		calculatednum = "1";
+	} else {
+		calculatednum = calculatednum + "1";
+	}
+document.querySelector("#display").value = calculatednum;
+		
+}
+	
+var calculatednum; 
+document.querySelector('#2-btn').onclick = function(){
+	calculatednum = document.querySelector("#display").value;
+
+	if (calculatednum == "0") {
+		calculatednum = "2";
+	} else {
+		calculatednum = calculatednum + "2";
+	}
+document.querySelector("#display").value = calculatednum;
+	
+}
+
+var calculatednum;
+document.querySelector('#3-btn').onclick = function(){
+	calculatednum = document.querySelector("#display").value;
+
+	if (calculatednum == "0") {
+		calculatednum = "3";
+	} else {
+		calculatednum = calculatednum + "3";
+	}
+document.querySelector("#display").value = calculatednum;
+	
+}
+
+var num01;
+var operation;
+
+document.querySelector('#add-btn').onclick = function(){
+	num01 = document.querySelector("#display").value;
+
+	num01 = parseInt(num01);
+
+	operation = '+';
+
+	document.querySelector("#display").value = "0";	
+}
+
+var calculatednum;
+document.querySelector('#0-btn').onclick = function(){
+	calculatednum = document.querySelector("#display").value;
+
+	if (calculatednum == "0") {
+		calculatednum = "0";
+	} else {
+		calculatednum = calculatednum + "0";
+	}
+document.querySelector("#display").value = calculatednum;
+}
+
+var calculatednum;
+document.querySelector('#point-btn').onclick = function(){
+	if ()
+
+	
+}
+
+
+document.querySelector('#equal-btn').onclick = function(){
+	var num02 = document.querySelector("#display").value;
+
+	num02 = parseInt(num02);
+
+	var result = "Error";
+
+	if (operation == '+') {
+		result = num01 + num02;
+	} else if (operation == '-') {
+		result = num01 - num02;
+	} else if (operation == '*') {
+		result = num01 * num02;
+	}  else if (operation == '/') {
+		result = num01 / num02 
+	}
+document.querySelector("#display").value = result; 
+
+}
+
+
+
+
+
+	</script>
+
+</body>
+</html>
