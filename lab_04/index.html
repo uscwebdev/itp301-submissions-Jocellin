@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Photo Gallery</title>
+<style>
+
+.size{
+	height:250px;
+	float:left;
+
+}
+.gallery{
+	width:1089px;
+	margin:0 auto;
+}
+
+
+.main {
+	width:700px;
+	margin-left:220px;
+	padding-top:20px;
+
+}
+
+
+
+h1{
+	text-align:center;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+</style>	
+
+</head>
+
+<body>
+
+<h1>Kali Uchis Gallery</h1>
+
+<div class="gallery">
+
+<div class="row1">
+
+<img id="kali1" class="size" src="Kali1.jpeg" alt="hand holding cocktail">
+
+<img id="kali3" class="size" src="Kali3.jpeg" alt="Kali with butterfly in mouth">
+
+<img id="kali2" class="size" src="Kali2.jpeg" alt="Kali looking to the side">
+
+<img id="kali5" class="size" src="Kali5.jpeg" alt="Red moon in venus Kali">
+
+<img id="kali" class="size" src="blue.jpeg" alt="Computer displaying do you ever think of me">
+
+</div>
+
+<div>
+<img id="displayimg" class="main" src="Kali4.jpeg" alt="isolation album	">
+</div>
+</div>
+
+<script>
+
+//select all elements with the xlass "size"
+	var kali = document.querySelectorAll(".size");
+	console.log(kali);
+
+	for (var i = 0; i <kali.length; i++) {
+		kali[i].onclick = function(){
+			var thumbnails = document.querySelector("#displayimg").src = this.src 
+			var thumbnails = document.querySelector("#displayimg").alt = this.alt 
+			console.log(this.alt);
+		}
+	}
+
+
+/*
+document.querySelector('#kali1').onclick = function(){
+	document.querySelector('#kali4').src = "Kali1.jpeg";
+}
+
+document.querySelector('#kali3').onclick = function(){
+	document.querySelector('#kali4').src = "Kali3.jpeg";
+}
+
+document.querySelector('#kali2').onclick = function(){
+	document.querySelector('#kali4').src = "Kali2.jpeg";
+}
+
+document.querySelector('#kali5').onclick = function(){
+	document.querySelector('#kali4').src = "Kali5.jpeg";
+}
+
+document.querySelector('#kali').onclick = function(){
+	document.querySelector('#kali4').src = "blue.jpeg";
+}
+*/
+
+</script>
+
+</body>
+</html>
