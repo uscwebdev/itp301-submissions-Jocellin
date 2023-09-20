@@ -7,18 +7,11 @@
 .size{
 	width:100px;
 	margin:30px;
+	float:left;
 
 }	
 
-#container{
-	width:900px;
-	margin:0 auto;
-	padding:30px;
-}
 
-h1{
-	text-align:center;
-}
 
 </style>	
 </head>
@@ -27,12 +20,10 @@ h1{
 
 <h1>Liar's Dice</h1>
 
-<div id="container">
-
 <span>Your guess:</span><input id="inputguess" type="text"> 
 <button id="submit-btn" type="button">Submit</button>
 
-<h2>Results:</h2><span id="">messages go here</span>
+<strong>Results:</strong><span id="result">messages go here</span>
 
 
 <img id="dice1" class="size" src="1.png" alt="number 1 dice">
@@ -45,7 +36,7 @@ h1{
 
 <img id="dice5" class="size" src="5.png" alt="number 5 dice">
 
-</div>
+
 
 <script>
 
@@ -92,8 +83,13 @@ document.querySelector('#dice5').src = dicepic5;
 var num = parseInt(document.querySelector("#inputguess").value);
 
 if (number.includes(num)) {
-	document.querySelector("#i").innerHTML = "Correct";
-	documene
+	document.querySelector("#result").innerHTML = "Correct";
+	document.querySelector("#result").style.color = "green";
+}
+
+else {
+	document.querySelector("#result").innerHTML = "Try Again";
+	document.querySelector("#result").style.color = "red";
 }
 
 
