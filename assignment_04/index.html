@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Liar's Dice</title>
+<style>
+
+.size{
+	width:100px;
+	margin:30px;
+
+}	
+
+#container{
+	width:900px;
+	margin:0 auto;
+	padding:30px;
+}
+
+h1{
+	text-align:center;
+}
+
+</style>	
+</head>
+
+<body>
+
+<h1>Liar's Dice</h1>
+
+<div id="container">
+
+<span>Your guess:</span><input id="inputguess" type="text"> 
+<button id="submit-btn" type="button">Submit</button>
+
+<h2>Results:</h2><span id="">messages go here</span>
+
+
+<img id="dice1" class="size" src="1.png" alt="number 1 dice">
+
+<img id="dice2" class="size" src="2.png" alt="number 2 dice">
+
+<img id="dice3" class="size" src="3.png" alt="number 3 dice">
+
+<img id="dice4" class="size" src="4.png" alt="number 4 dice">
+
+<img id="dice5" class="size" src="5.png" alt="number 5 dice">
+
+</div>
+
+<script>
+
+/*
+workflow:
+1. when users click on button:
+  a) create an empty array numbers (or similar) to store dice values
+  b) loop thorugh numbers array and populate it with five random integers
+    i. use Math.floor( Math.random() * 6 + 1) to generate a random integer between 1 and 6
+  c) create images array that stores five dice images from the DOM
+    i. Hint: use query.SelectorAll()
+  d) loop through images array and set each image to the one that shows corresponding value stored in numbers array 
+    i. Hint: note how image names correspond to numbers displayed by each dice. I.e. for a die with number 3 the image name is 3.png, which is "3" concatenated with ".png".
+  e) if users guessed at least one value correctly, display a succes message in green
+    i. Otherwise, display an error/failure message in red.
+2. Define and invoke at least one function with at keast one parameter
+
+*/
+
+
+
+document.querySelector('.submit').onclick = function(){
+	var numbers = [1, 2, 3, 4, 5];
+console.log(numbers);
+for (var i = 0; i < numbers.length; i++ ) {
+	numbers[i] = Math.floor(Math.random() * 6 + 1);
+	}
+
+var dicepic1 = numbers[0] + ".png";
+document.querySelector('#dice1').src = dicepic1;
+
+var dicepic2 =  numbers[1] + ".png";
+document.querySelector('#dice2').src = dicepic2;
+
+var dicepic3 =  numbers[2] + ".png";
+document.querySelector('#dice3').src = dicepic3;
+
+var dicepic4 =  numbers[3] + ".png";
+document.querySelector('#dice4').src = dicepic4;
+
+var dicepic5 =  numbers[4] + ".png";
+document.querySelector('#dice5').src = dicepic5;
+
+var num = parseInt(document.querySelector("#inputguess").value);
+
+if (number.includes(num)) {
+	document.querySelector("#i").innerHTML = "Correct";
+	documene
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</script>	
+
+
+</body>
+</html>
